@@ -1,0 +1,54 @@
+/* ---------- CHAOS BACKGROUND ---------- */
+.chaos-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+
+  background: linear-gradient(
+    270deg,
+    #ff00cc,
+    #3333ff,
+    #00ffcc
+  );
+  background-size: 600% 600%;
+  animation: bgShift 20s ease infinite;
+}
+
+/* ---------- BACKGROUND GRADIENT ---------- */
+@keyframes bgShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- FLOATING SHAPES ---------- */
+.shape {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20%;
+  animation:
+    float 14s ease-in-out infinite,
+    spin 10s linear infinite;
+}
+
+/* Unique positions */
+.shape:nth-child(1) { top: 10%; left: 10%; }
+.shape:nth-child(2) { top: 70%; left: 20%; animation-delay: 2s; }
+.shape:nth-child(3) { top: 40%; left: 80%; animation-delay: 4s; }
+.shape:nth-child(4) { top: 85%; left: 70%; animation-delay: 1s; }
+.shape:nth-child(5) { top: 20%; left: 60%; animation-delay: 3s; }
+
+/* ---------- SHAPE MOTION ---------- */
+@keyframes float {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(60px, -90px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes spin {
+  from { rotate: 0deg; }
+  to   { rotate: 360deg; }
+}

@@ -1,0 +1,174 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: pink transparent;
+}  
+
+#hover:hover {
+    content: "This does nothing!";
+}
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+
+/* ---------- BACKGROUND ---------- */
+body {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
+  background-size: 600% 600%;
+  animation: bgShift 20s ease infinite;
+  overflow-x: hidden;
+  color: white;
+}
+
+/* ---------- BACKGROUND ANIMATION ---------- */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- FLOATING SHAPES ---------- */
+.shape {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.15);
+  animation: float 12s infinite ease-in-out, spin 8s linear infinite;
+  border-radius: 20%;
+}
+
+.shape:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.shape:nth-child(2) { top: 70%; left: 20%; animation-delay: 2s; }
+.shape:nth-child(3) { top: 40%; left: 80%; animation-delay: 4s; }
+.shape:nth-child(4) { top: 85%; left: 70%; animation-delay: 1s; }
+.shape:nth-child(5) { top: 20%; left: 60%; animation-delay: 3s; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-80px) translateX(40px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes spin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+/* ---------- CENTER CONTENT ---------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ---------- GLITCH TEXT ---------- */
+h1 {
+  font-size: 4rem;
+  position: relative;
+  animation: glitch 2.5s infinite;
+}
+
+h1::before,
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1::before {
+  color: cyan;
+  clip-path: inset(0 0 60% 0);
+  animation: glitchTop 1.5s infinite linear;
+}
+
+h1::after {
+  color: magenta;
+  clip-path: inset(60% 0 0 0);
+  animation: glitchBottom 1.5s infinite linear;
+}
+
+@keyframes glitch {
+  0%,100% { transform: translate(0); }
+  20% { transform: translate(-2px,2px); }
+  40% { transform: translate(2px,-2px); }
+}
+
+@keyframes glitchTop {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-8px); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transition: left 0.3s ease;
+}
+
+.button:hover::before {
+  left: 0;
+}
+
+.button:hover {
+  transform: scale(1.15) rotate(3deg);
+  box-shadow: 0 0 25px white;
+}
+
+/* ---------- CHAOS TEXT ---------- */
+p {
+  max-width: 600px;
+  line-height: 1.6;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
