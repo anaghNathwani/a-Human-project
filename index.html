@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora — Clean & Fancy CSS-only Site</title>
+
+  <!-- Optional: replace or remove Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A clean, fancy, CSS-only demo site with many animations and interactive patterns without JavaScript.">
+</head>
+<body>
+  <!-- Decorative animated background shapes -->
+  <div class="bg-shapes" aria-hidden="true"></div>
+
+  <!-- Navigation with a checkbox mobile toggle (no JS) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Aurora<span class="dot">.</span></a>
+
+      <input id="nav-toggle" type="checkbox" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#signup">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">Design that moves, without code.</h1>
+          <p class="hero-desc">Carefully crafted CSS patterns and subtle animations give your site life — all without JavaScript. Fast, accessible, and beautiful.</p>
+          <p class="hero-cta">
+            <a class="btn-primary" href="#features">Explore features</a>
+            <a class="btn-ghost" href="#showcase">See showcase</a>
+          </p>
+        </div>
+
+        <div class="hero-panel" aria-hidden="false">
+          <!-- Fancy card stack demonstrating various small animations -->
+          <div class="card-stack">
+            <article class="card">
+              <svg class="card-ill" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+              <h3>Fluid gradients</h3>
+              <p>Animated, high-contrast gradients that shift smoothly.</p>
+            </article>
+
+            <article class="card card--elevated">
+              <svg class="card-ill" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" /></svg>
+              <h3>Glass & Depth</h3>
+              <p>Soft glassmorphism with layered depth and blur.</p>
+            </article>
+
+            <article class="card">
+              <svg class="card-ill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16" stroke-width="2" /></svg>
+              <h3>Subtle motion</h3>
+              <p>Micro-animations and hover responses for delight.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Features</h2>
+        <p class="section-sub">Several patterns and components — easily reusable and fully CSS-driven.</p>
+
+        <div class="grid features-grid">
+          <article class="feature">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7L12 18l-6.5 2 2-7L2 9h7z"/></svg>
+            </div>
+            <h3>Animated gradients</h3>
+            <p>Seamless, animated color transitions that are performant and scalable.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /></svg>
+            </div>
+            <h3>CSS-only interactions</h3>
+            <p>Menus, modals, and toggles implemented with :checked and :target patterns.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg>
+            </div>
+            <h3>Responsive layout</h3>
+            <p>Grid and flex combinations adapt to screen sizes gracefully.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>
+            </div>
+            <h3>Accessible by default</h3>
+            <p>Semantic markup and motion respect via prefers-reduced-motion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section id="showcase" class="showcase">
+      <div class="container">
+        <h2 class="section-title">Showcase</h2>
+        <p class="section-sub">A few example tiles that demonstrate hover animations and layered effects.</p>
+
+        <div class="grid showcase-grid">
+          <figure class="tile">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><rect width='100%' height='100%' fill='%23dfe7ff'/><text x='50%' y='50%' font-size='60' text-anchor='middle' fill='%23708fd6' font-family='Inter'>Tile A</text></svg>" alt="">
+            <figcaption>
+              <h4>Interactive tile</h4>
+              <p>Hover for scale, glow, and overlay.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tile">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><rect width='100%' height='100%' fill='%23fff4e6'/><text x='50%' y='50%' font-size='60' text-anchor='middle' fill='%23e09f3e' font-family='Inter'>Tile B</text></svg>" alt="">
+            <figcaption>
+              <h4>Depth layer</h4>
+              <p>Multiple shadows create layered depth.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tile">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><rect width='100%' height='100%' fill='%23e8fff2'/><text x='50%' y='50%' font-size='60' text-anchor='middle' fill='%2315a589' font-family='Inter'>Tile C</text></svg>" alt="">
+            <figcaption>
+              <h4>Blur & glass</h4>
+              <p>Backdrop blur and tint on hover.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing (simple) -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-sub">Simple tiers that highlight visual emphasis and motion for callouts.</p>
+
+        <div class="grid pricing-grid">
+          <div class="price-card">
+            <h3>Starter</h3>
+            <p class="price">$0 <span>/ month</span></p>
+            <ul>
+              <li>All core patterns</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn-outline" href="#signup">Start free</a>
+          </div>
+
+          <div class="price-card price-card--featured">
+            <div class="ribbon">Popular</div>
+            <h3>Pro</h3>
+            <p class="price">$15 <span>/ month</span></p>
+            <ul>
+              <li>Advanced animations</li>
+              <li>Design tokens & themes</li>
+            </ul>
+            <a class="btn-primary" href="#signup">Get Pro</a>
+          </div>
+
+          <div class="price-card">
+            <h3>Enterprise</h3>
+            <p class="price">Contact</p>
+            <ul>
+              <li>Design audit</li>
+              <li>Custom service</li>
+            </ul>
+            <a class="btn-outline" href="#contact">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div>
+          <h2>Let’s build something beautiful</h2>
+          <p>Send an email or use the Get Started link to open a simple CSS modal sign-up.</p>
+        </div>
+
+        <div>
+          <a class="btn-primary" href="#signup">Get Started</a>
+          <a class="btn-ghost" href="mailto:anaghnathwani@gmali.com">anaghnathwani@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CSS-only modal using :target -->
+  <div id="signup" class="modal" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+    <div class="modal-panel">
+      <a class="modal-close" href="#" aria-label="Close">✕</a>
+      <h3 id="signup-title">Start your free trial</h3>
+      <p>Just a demo: this modal is implemented with :target — no JavaScript.</p>
+      <form class="modal-form" action="#" method="post" onsubmit="return false;">
+        <label>
+          Email
+          <input type="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Plan
+          <select>
+            <option>Starter — Free</option>
+            <option>Pro — $15/mo</option>
+          </select>
+        </label>
+        <p class="modal-actions">
+          <a class="btn-outline" href="#">Cancel</a>
+          <button class="btn-primary" type="button">Start trial</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Aurora — made with CSS ❤️</p>
+      <p class="foot-links"><a href="#features">Features</a> · <a href="#pricing">Pricing</a> · <a href="#contact">Contact</a></p>
+    </div>
+  </footer>
+</body>
+</html>
