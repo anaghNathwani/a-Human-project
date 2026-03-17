@@ -5,3 +5,5 @@ The first officially added project to a-Human-Project, developed by the founder,
 Although active development was quickly shut down, this project has recieved lots of updates over the years, including one of a major rebranding.
 
 
+**Update 3/11/26**
+Obviously, not all of our subprojects have been uploaded to this repository to prevent broken code and issues. Since our last update, we have been developing a new website. The project was created for the software department application at our school's iGEM chapter. Our team has since determined that we should link that project here... entirely human generated. Take a look, and feedback is encouraged! 
